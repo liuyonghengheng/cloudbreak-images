@@ -72,7 +72,7 @@ sshd_harden_addressLoginGraceTime:
   file.replace:
     - name: /etc/ssh/sshd_config
     - pattern: "^LoginGraceTime"
-    - repl: "LoginGraceTime 0"
+    - repl: "LoginGraceTime 60"
     - append_if_not_found: True
 
 sshd_harden_ssh2:
